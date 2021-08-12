@@ -4,10 +4,16 @@
 
 def lcm_function(number_list):
 	
+	total_elements = len(number_list)
 	comparision_list = []
-	comparision_set = set()
-	lcm = 1
+	#comparision_set = set()
+	#lcm = 1
 	flag = 0
+
+	while True:
+		if 
+
+
 	for num in number_list:
 		for i in range(2, num+1):
 			if num % i == 0 and i != num:
