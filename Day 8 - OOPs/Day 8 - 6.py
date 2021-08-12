@@ -20,7 +20,7 @@ class Students:
 	def nameofschool(cls):
 		return cls.school
 
-	@staticmethod
+	@staticmethod		#decorator
 	def info():
 		return 'This school belongs to no one'
 
