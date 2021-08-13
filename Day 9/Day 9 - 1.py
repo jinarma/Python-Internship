@@ -39,7 +39,12 @@ s2 = Student('Suvrat', 39)
 
 s1.show()
 s2.show()
+s1.Laptop()
 
-#s1Lap = Student.Laptop()
-#s1Lap.show()
+print()
+
+s1Lap = Student.Laptop()
+s1Mob = Student.Mobile()
+s1Lap.show()
+s1Mob.show()
 #Student.Laptop.show()
