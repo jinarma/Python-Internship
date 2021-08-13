@@ -1,4 +1,4 @@
-# single inheritance
+# multiple inheritance
 
 class Anand:
 
@@ -22,7 +22,8 @@ class Lalita():
 
 class Vineeth(Anand, Lalita):
 	def __init__(self):
-		super().__init__()		#only runs anand init because MRO (method resolution order)
+		super().__init__()		#only runs anand init because MRO (method resolution order) dictates first arg is executed first
+
 		print('This is vineeth')
 
 	def Oneplus(self):

@@ -1,4 +1,4 @@
-# single inheritance
+# hybrid inheritance
 
 class Anand:
 

@@ -1,4 +1,4 @@
-# single inheritance
+# Hierarchical inheritance
 
 class Anand:
 
