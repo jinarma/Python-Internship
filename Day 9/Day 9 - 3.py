@@ -1,4 +1,4 @@
-# single inheritance
+# multilevel inheritance
 
 class Anand:
 
@@ -15,6 +15,7 @@ class Vineeth(Anand):
 	def __init__(self):
 		super().__init__()			#self doesnt work, y tho #update, it does, in the form of super()
 		print('This is vineeth')
+		
 	def Oneplus(self):
 		print('Oneplus phone of Vineeth')
 
