@@ -11,14 +11,14 @@ class SLL(Node):
 		self.Last = None
 
 	def InsertatEnd(self, x):
-		temp = Node(x)
+		new_node = Node(x)
 		if self.head is None:
-			self.head = temp
+			self.head = new_node
 		else:
 			t = self.head
 			while t.next is not None:
 				t = t.next
-			t.next = temp
+			t.next = new_node
 
 	def display(self):
 		t = self.head
@@ -27,13 +27,13 @@ class SLL(Node):
 			t = t.next
 
 	def InsertatEnd2(self, x):
-		temp = Node(x)
+		new_node = Node(x)
 		if self.head is None:
-			self.head = temp
-			self.last = temp
+			self.head = new_node
+			self.last = new_node
 		else:
-			self.last.next = temp
-			self.last = temp
+			self.last.next = new_node
+			self.last = new_node
 
 
 	def DeleteatEnd(self):
@@ -57,6 +57,7 @@ class SLL(Node):
 		else:
 			self.head = self.head.next
 
+	""" Complete thsis method """
 	def delete_at_pos(self, pos):
 
 		if self.head is None:
