@@ -27,10 +27,19 @@ class Student:
 	def __str__(self):		#check how this works
 		return '{} {}'.format(self.m1, self.m2)
 
+	def __int__(self):
+		x = self.m1
+		y = self.m2
+		return x, y
+
 
 s1 = Student(78, 96)
 s2 = Student(86, 84)
 
+print(s1)		# __str__ is called as a constructor without explicitly calling it
+print(str(s1))		# implementation in __str__(self)
+
 t = s1+s2
-print(s1+s2)
-print(s1>s2)
+#print(s1)
+# print(s1+s2)
+# print(s1>s2)
