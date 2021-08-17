@@ -17,7 +17,7 @@ class SLL(Node):
 		else:
 			t = self.head
 			while t.next is not None:
-				t = t.next
+				t = t.next		
 			t.next = new_node
 
 	def display(self):
@@ -57,23 +57,43 @@ class SLL(Node):
 		else:
 			self.head = self.head.next
 
-	""" Complete thsis method """
 	def delete_at_pos(self, pos):
-
 		if self.head is None:
-			pass
+			print('no elements')
+			return
+		elif pos == 1:
+			self.head = self.head.next
+		else:
+			t = self.head
+			while pos-2:
+				t = t.next
+				pos -= 1
+				if t.next is None:
+					print('Out of range')
+					return
+			
+			t.next = t.next.next
+
 
 
 	def InsertatPos(self, x, pos):
 		new_node = Node(x)
 		if self.head == None:
 			self.head = new_node
+
+		elif pos == 1:
+			t = self.head
+			new_node.next = t
+			self.head = new_node
+			
 		else:
 			t = self.head
-			while pos:
+			while pos-2:
 				t = t.next
 				pos -= 1
-
+				if t.next is None:
+					print('Out of range')
+					return
 			new_node.next = t.next
 			t.next = new_node
 			
@@ -95,5 +115,13 @@ a.DeleteatBegin()
 a.display()
 a.delete_at_pos(3)
  """
-a.InsertatPos(100, 1)
+# print(Node.SLL(a))
 a.display()
+print()
+a.InsertatPos(100, 9)
+a.display()
+print()
+a.delete_at_pos(8)
+a.display()
+# a.delete_at_pos(1)
+#a.display()
