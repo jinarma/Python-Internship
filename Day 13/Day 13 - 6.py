@@ -23,6 +23,9 @@ class DLL(Node):
 
 	def reverse(self):
 		
+		if self.head is None:
+			print('DLL is empty')
+			return
 		temp = None
 		t = self.head
 		while t is not None:
