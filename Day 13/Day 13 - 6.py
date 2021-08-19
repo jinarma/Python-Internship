@@ -1,5 +1,4 @@
-# reverse DLL H.W. (incomplete)
-
+# reverse DLL H.W.
 class Node:
 	
 	def __init__(self, data):
@@ -17,45 +16,31 @@ class DLL(Node):
 		new_node = Node(data)
 		if self.head is None:
 			self.head = new_node
-			self.last = None
 		else:
-			t = self.head
-			while t.next is not None:
-				t = t.next
-			t.next = new_node
-			new_node.prev = t
-		self.last = new_node
+			new_node.next = self.head
+			self.head.prev = new_node
+			self.head = new_node
 
-	def reverse(self, t):
-		if self.head is None:
-			print('Empty DLL')
-			exit()
-		else:
-			if t.next is None:
-				temp = t.next
-				t.next = t.prev
-				t.prev = temp
-				#self.head = t
-				print('check')
-				return t
-			else:
-				print('check 2')
-				t = self.reverse(t.next)
-				print('check 3')
-				temp = t.next
-				t.next = t.prev
-				t.prev = temp
-				return t
+	def reverse(self):
+		
+		temp = None
+		t = self.head
+		while t is not None:
+			temp = t.prev
+			t.prev = t.next
+			t.next = temp
+			t = t.prev
+		if temp is not None:
+			self.head = temp.prev
 
 	def diplay(self):
 		if self.head is None:
 			print('DLL is empty')
 		else:
 			t = self.head
-			while t.next is not None:
+			while t is not None:
 				print(t.data)
 				t = t.next
-			print(self.last.data)
 
 	
 
@@ -72,6 +57,6 @@ a.insert(50)
 a.diplay()
 print()
 
-#a.reverse(a.head)
+a.reverse()
 
 a.diplay()
