@@ -1,4 +1,4 @@
-# String
+# String manipulation
 
 s = 'Shubhanakar'
 print(s[-1:12], "**")
