@@ -11,5 +11,5 @@ Rishabh = {
 	'Transport' : 'Bus'
 }
 
-print(Jinarma)
+print(Jinarma['name'], Jinarma['Section'])
 print(Rishabh)
