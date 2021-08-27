@@ -17,7 +17,7 @@ def twin_prime(num_list):
 		if prime_check(i):
 			temp = i+2
 			if prime_check(temp):
-				print(i, 'and', temp)
+				print([i, temp])
 
 
 twin_prime(list(range(1, 51)))
