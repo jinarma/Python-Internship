@@ -1,6 +1,6 @@
 
 
-num = input("Enter the number : ")
+num = input()
 num_list = list(map(int, num))
 
 print(num_list[0]+num_list[len(num_list)-1])
