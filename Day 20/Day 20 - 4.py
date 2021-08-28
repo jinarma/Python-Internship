@@ -9,14 +9,15 @@ Note: There will be at least 2 person waiting in the meeting room.
 
 def select_MD(persons_list):
 
-	for i in range(len(persons_list)):
+	for i in range(0, len(persons_list)-1):
 		if persons_list[i] == max(persons_list[i:]):
-			print(persons_list[i])
+			print(i, persons_list[i])
 			return
+	print('The promotion stands cancelled')
 	return
 
 
-select_MD([2, 3, 12, 4, 24, 120, 23])
+select_MD([3, 2, 3, 2])
 		
 
 	
