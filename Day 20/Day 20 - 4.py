@@ -6,18 +6,27 @@ Write the program to find the new MD of that company where you are provided with
 Note: There will be at least 2 person waiting in the meeting room.
  """
 
+# incomplete
+
 
 def select_MD(persons_list):
-
+	count = 0
 	for i in range(0, len(persons_list)-1):
 		if persons_list[i] == max(persons_list[i:]):
+			for j in range(i, len(persons_list)-1):
+				if persons_list[i] == persons_list[j]:
+					count += 1
+					temp = len(persons_list)-(i+1)
+					if count == len(persons_list)-(i+1):
+						print('The promotion stands cancelled')
+						return
 			print(i, persons_list[i])
 			return
 	print('The promotion stands cancelled')
 	return
 
 
-select_MD([3, 2, 3, 2])
+select_MD([2, 2, 2, 3, 5, 3])
 		
 
 	
