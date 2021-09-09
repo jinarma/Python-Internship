@@ -38,9 +38,3 @@ def check_eligible_password(string):
 
 print(check_eligible_password('Ruby1sgre@t, 123djdnq, asjfn23, sanf,finsad5, BreakD@nc3'))
 
-		
-
-
-
-
-
