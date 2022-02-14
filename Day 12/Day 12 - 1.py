@@ -13,7 +13,6 @@ class SLL:
 	def insert_at_end(self, x):
 
 		new_node = Node(x)
-
 		if self.head is None:
 			self.head = new_node
 		else:
